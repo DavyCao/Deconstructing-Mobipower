@@ -3,7 +3,7 @@ $run = 1
 $totalrun = 11
 $ip3 = 70
 $ip4 = 37
-weblist=[]
+weblist = []
 
 while $web <= 10 do
 
@@ -39,11 +39,11 @@ while $web <= 10 do
 		system("adb shell cp /sdcard/test.txt /sdcard/websites#$web.txt")
 		system("adb shell rm /sdcard/test.txt")
 
-		btn=query("edittext")
+		btn = query("edittext")
 		if btn.empty?
 			system("adb shell input tap 590 670")
 		end
-	  	$run +=1
+	  	$run += 1
 	end
 
 	reinstall_apps
